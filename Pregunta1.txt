@@ -1,0 +1,21 @@
+const alto = 5;
+const ancho = 10;
+
+let figura = "";
+
+if (isNaN(alto) || isNaN(ancho) || alto < 2 || ancho < 2) {
+  figura = "valores";
+} else {
+  for (let i = 0; i < alto; i++) {
+    for (let j = 0; j < ancho; j++) {
+      if (i === 0 || i === alto - 1 || j === 0 || j === ancho - 1) {
+        figura += "*";
+      } else {
+        figura += " ";
+      }
+    }
+    figura += "\n";
+  }
+}
+
+console.log(figura);
